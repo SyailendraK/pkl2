@@ -252,7 +252,7 @@
 					<div class="col-sm-6 " style="font-size: 0.8rem;">
 						<p class="pb-0_8">Smi, <?= tgl($data[1]['tanggal']); ?></p>
 						<p class="jarak-0">Kepada Yth. :</p>
-						<p class="jarak-0"><?= $kepada2 ?></p>
+						<p class="jarak-0"><?= sanitize_text_field($kepada2) ?></p>
 						<p class="jarak-0"></p>
 						<br>
 						<u class="tab jarak-0">SUKABUMI</u>
