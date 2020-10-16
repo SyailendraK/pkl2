@@ -88,7 +88,7 @@
 						<?php $i=1+$page;foreach($pangkalan as $t => $val): ?>
 						<tr>
 							<td><?= $i ?></td>
-							<td><?= $val['agen'] ?></td>
+							<td><?= sanitize_text_field($val['agen']) ?></td>
 							<td><?php 
 							echo $val['nama_pangkalan'];
 							$id = $val['id'];

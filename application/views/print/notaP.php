@@ -147,7 +147,7 @@
 
 <body>
 	<div class="row pt-3" <?php if($margin != null){
-		echo 'style="margin-top: '.$margin.'cm;"';
+		print_r('style="margin-top: ').$margin.'cm;"';
 	} ?>>
 		<div class="col-sm-6 pr-1">
 			<div class="A6 ml-1 mt-1">

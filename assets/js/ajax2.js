@@ -22,17 +22,18 @@ function getXMLHTTPRequest() {
 function view_input_get() {
 	var xmlhttp = getXMLHTTPRequest();
 	//get input value
-	var id = encodeURI(document.getElementById('btn-update').value);
-	var address = encodeURI(document.getElementById('address').value);
-	var city = encodeURI(document.getElementById('city').value);
+	var id = encodeURI(document.getElementById("btn-update").value);
+	var address = encodeURI(document.getElementById("address").value);
+	var city = encodeURI(document.getElementById("city").value);
 	//set url and inner
 	var url = "process_form_get.php?name=" + name + "&address=" + address + "&city=" + city;
 	var inner = "user_input";
 	//open request 
-	xmlhttp.open('GET', url, true);
+	xmlhttp.open("GET", url, true);
 	xmlhttp.onreadystatechange = function () {
-		document.getElementById(inner).innerHTML = '<img src="images/ajax_loader.jpg" /> ';
-		if ((xmlhttp.readyState == 4) && (xmlhttp.status == 200)) {
+		document.getElementById(inner).innerHTML = "<img src="
+		images / ajax_loader.jpg " /> ";
+		if ((xmlhttp.readyState === 4) && (xmlhttp.status === 200)) {
 			document.getElementById(inner).innerHTML = xmlhttp.responseText;
 		}
 		return false;
@@ -51,8 +52,8 @@ function view_input_post_pangkalan(id) {
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded ");
 
 	xmlhttp.onreadystatechange = function () {
-		// document.getElementById(inner).innerHTML = '<img src="images/ajax_loader.jpg" /> ';
-		if ((xmlhttp.readyState == 4) && (xmlhttp.status == 200)) {
+		// document.getElementById(inner).innerHTML = "<img src="images/ajax_loader.jpg" /> ";
+		if ((xmlhttp.readyState === 4) && (xmlhttp.status === 200)) {
 			document.getElementById(inner).innerHTML =
 				xmlhttp.responseText;
 		}
@@ -72,8 +73,8 @@ function view_input_post_pengemudi(id) {
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded ");
 
 	xmlhttp.onreadystatechange = function () {
-		// document.getElementById(inner).innerHTML = '<img src="images/ajax_loader.jpg" /> ';
-		if ((xmlhttp.readyState == 4) && (xmlhttp.status == 200)) {
+		// document.getElementById(inner).innerHTML = "<img src="images/ajax_loader.jpg" /> ";
+		if ((xmlhttp.readyState === 4) && (xmlhttp.status === 200)) {
 			document.getElementById(inner).innerHTML =
 				xmlhttp.responseText;
 		}
@@ -85,23 +86,24 @@ var no = 2;
 var del = false;
 var del2 = false;
 var ke = 3;
+var n = 0;
 
 function setSession(k) {
-	sessionStorage.setItem("pangkalan-" + k, document.getElementById('pangkalan-' + k).value);
+	sessionStorage.setItem("pangkalan-" + k, document.getElementById("pangkalan-" + k).value);
 	sessionStorage.setItem("banyak-" + k, document.getElementById("banyak-" + k).value);
 	sessionStorage.setItem("faktur-" + k, document.getElementById("faktur-" + k).value);
 }
 
 function view_input_post_add() {
 	if (no <= 8) {
-		if (no == 8) {
+		if (no === 8) {
 			document.getElementById("tbh").setAttribute("style", "display: none;");
 		} else {
 			document.getElementById("tbh").setAttribute("style", "display: block;");
 		}
-		if (del2 == false) {
+		if (del2 === false) {
 			for (k = 1; k < no; k++) {
-				sessionStorage.setItem("pangkalan-" + k, document.getElementById('pangkalan-' + k).value);
+				sessionStorage.setItem("pangkalan-" + k, document.getElementById("pangkalan-" + k).value);
 				sessionStorage.setItem("banyak-" + k, document.getElementById("banyak-" + k).value);
 				sessionStorage.setItem("faktur-" + k, document.getElementById("faktur-" + k).value);
 			}
@@ -117,23 +119,23 @@ function view_input_post_add() {
 		xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded ");
 
 		xmlhttp.onreadystatechange = function () {
-			// document.getElementById(inner).innerHTML = '<img src="images/ajax_loader.jpg" /> ';
-			if ((xmlhttp.readyState == 4) && (xmlhttp.status == 200)) {
-				if (del == false) {
+			// document.getElementById(inner).innerHTML = "<img src="images/ajax_loader.jpg" /> ";
+			if ((xmlhttp.readyState === 4) && (xmlhttp.status === 200)) {
+				if (del === false) {
 					document.getElementById(inner).innerHTML = xmlhttp.responseText;
-					if (sessionStorage.getItem('pangkalan-1') != null) {
+					if (sessionStorage.getItem("pangkalan-1") != null) {
 						// console.log(no);
 						for (n = 1; n <= no; n++) {
-							document.getElementById('pangkalan-' + n).value = sessionStorage.getItem('pangkalan-' + n);
-							document.getElementById("banyak-" + n).value = sessionStorage.getItem('banyak-' + n);
-							document.getElementById("faktur-" + n).value = sessionStorage.getItem('faktur-' + n);
+							document.getElementById("pangkalan-" + n).value = sessionStorage.getItem("pangkalan-" + n);
+							document.getElementById("banyak-" + n).value = sessionStorage.getItem("banyak-" + n);
+							document.getElementById("faktur-" + n).value = sessionStorage.getItem("faktur-" + n);
 						}
 					}
 					del2 = false;
 					no += 1;
 				} else {
 					var temp = "deleteFormGroup-" + ke;
-					document.getElementById(temp).innerHTML = '';
+					document.getElementById(temp).innerHTML = "";
 					del = false;
 					if (no > 1) {
 						no -= 1;
@@ -155,7 +157,7 @@ function deleteForm(k) {
 		ke = k;
 		if (no != k) {
 			for (n = k; n < no; n++) {
-				if (n == k) {
+				if (n === k) {
 					sessionStorage.setItem("pangkalan-" + n, null);
 					sessionStorage.setItem("banyak-" + n, null);
 					sessionStorage.setItem("faktur-" + n, null);
@@ -190,8 +192,8 @@ function view_input_post_tambah(id) {
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded ");
 
 	xmlhttp.onreadystatechange = function () {
-		// document.getElementById(inner).innerHTML = '<img src="images/ajax_loader.jpg" /> ';
-		if ((xmlhttp.readyState == 4) && (xmlhttp.status == 200)) {
+		// document.getElementById(inner).innerHTML = "<img src="images/ajax_loader.jpg" /> ";
+		if ((xmlhttp.readyState === 4) && (xmlhttp.status === 200)) {
 			document.getElementById(inner).innerHTML =
 				xmlhttp.responseText;
 			no += 1;
@@ -210,8 +212,8 @@ function view_input_post_rencana(id) {
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded ");
 
 	xmlhttp.onreadystatechange = function () {
-		// document.getElementById(inner).innerHTML = '<img src="images/ajax_loader.jpg" /> ';
-		if ((xmlhttp.readyState == 4) && (xmlhttp.status == 200)) {
+		// document.getElementById(inner).innerHTML = "<img src="images/ajax_loader.jpg" /> ";
+		if ((xmlhttp.readyState === 4) && (xmlhttp.status === 200)) {
 			document.getElementById(inner).innerHTML =
 				xmlhttp.responseText;
 			no += 1;
@@ -231,8 +233,8 @@ function view_input_post_mpangkalan(id) {
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded ");
 
 	xmlhttp.onreadystatechange = function () {
-		// document.getElementById(inner).innerHTML = '<img src="images/ajax_loader.jpg" /> ';
-		if ((xmlhttp.readyState == 4) && (xmlhttp.status == 200)) {
+		// document.getElementById(inner).innerHTML = "<img src="images/ajax_loader.jpg" /> ";
+		if ((xmlhttp.readyState === 4) && (xmlhttp.status === 200)) {
 			document.getElementById(inner).innerHTML =
 				xmlhttp.responseText;
 		}
@@ -250,8 +252,8 @@ function view_input_post_nota(id) {
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded ");
 
 	xmlhttp.onreadystatechange = function () {
-		// document.getElementById(inner).innerHTML = '<img src="images/ajax_loader.jpg" /> ';
-		if ((xmlhttp.readyState == 4) && (xmlhttp.status == 200)) {
+		// document.getElementById(inner).innerHTML = "<img src="images/ajax_loader.jpg" /> ";
+		if ((xmlhttp.readyState === 4) && (xmlhttp.status === 200)) {
 			document.getElementById(inner).innerHTML =
 				xmlhttp.responseText;
 		}
@@ -269,8 +271,8 @@ function view_input_post_jalan(id) {
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded ");
 
 	xmlhttp.onreadystatechange = function () {
-		// document.getElementById(inner).innerHTML = '<img src="images/ajax_loader.jpg" /> ';
-		if ((xmlhttp.readyState == 4) && (xmlhttp.status == 200)) {
+		// document.getElementById(inner).innerHTML = "<img src="images/ajax_loader.jpg" /> ";
+		if ((xmlhttp.readyState === 4) && (xmlhttp.status === 200)) {
 			document.getElementById(inner).innerHTML =
 				xmlhttp.responseText;
 		}
@@ -288,8 +290,8 @@ function view_input_post_pesanan(id) {
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded ");
 
 	xmlhttp.onreadystatechange = function () {
-		// document.getElementById(inner).innerHTML = '<img src="images/ajax_loader.jpg" /> ';
-		if ((xmlhttp.readyState == 4) && (xmlhttp.status == 200)) {
+		// document.getElementById(inner).innerHTML = "<img src="images/ajax_loader.jpg" /> ";
+		if ((xmlhttp.readyState === 4) && (xmlhttp.status === 200)) {
 			document.getElementById(inner).innerHTML =
 				xmlhttp.responseText;
 		}
@@ -310,8 +312,8 @@ function view_input_post_pro(id, kat, skat) {
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded ");
 
 	xmlhttp.onreadystatechange = function () {
-		// document.getElementById(inner).innerHTML = '<img src="images/ajax_loader.jpg" /> ';
-		if ((xmlhttp.readyState == 4) && (xmlhttp.status == 200)) {
+		// document.getElementById(inner).innerHTML = "<img src="images/ajax_loader.jpg" /> ";
+		if ((xmlhttp.readyState === 4) && (xmlhttp.status === 200)) {
 			document.getElementById(inner).innerHTML =
 				xmlhttp.responseText;
 		}
@@ -328,7 +330,7 @@ var udel2 = false;
 var uke = 3;
 
 function usetSession(k) {
-	sessionStorage.setItem("upangkalan-" + k, document.getElementById('upangkalan-' + k).value);
+	sessionStorage.setItem("upangkalan-" + k, document.getElementById("upangkalan-" + k).value);
 	sessionStorage.setItem("ubanyak-" + k, document.getElementById("ubanyak-" + k).value);
 	sessionStorage.setItem("ufaktur-" + k, document.getElementById("ufaktur-" + k).value);
 }
@@ -342,18 +344,18 @@ function uview_input_post_add() {
 	}
 
 	if (uno <= 8) {
-		if (uno == 8) {
+		if (uno === 8) {
 			document.getElementById("utbh").setAttribute("style", "display: none;");
 		} else {
 			document.getElementById("utbh").setAttribute("style", "display: block;");
 		}
-		if (udel2 == false) {
+		if (udel2 === false) {
 			for (k = 1; k < uno; k++) {
 				var tempBanyak = 0;
 				if (document.getElementById("ubanyak-" + k).value != null) {
 					tempBanyak = document.getElementById("ubanyak-" + k).value;
 				}
-				sessionStorage.setItem("upangkalan-" + k, document.getElementById('upangkalan-' + k).value);
+				sessionStorage.setItem("upangkalan-" + k, document.getElementById("upangkalan-" + k).value);
 				sessionStorage.setItem("ubanyak-" + k, tempBanyak);
 				sessionStorage.setItem("ufaktur-" + k, document.getElementById("ufaktur-" + k).value);
 			}
@@ -374,18 +376,18 @@ function uview_input_post_add() {
 		xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded ");
 
 		xmlhttp.onreadystatechange = function () {
-			// document.getElementById(inner).innerHTML = '<img src="images/ajax_loader.jpg" /> ';
-			if ((xmlhttp.readyState == 4) && (xmlhttp.status == 200)) {
-				if (udel == false) {
+			// document.getElementById(inner).innerHTML = "<img src="images/ajax_loader.jpg" /> ";
+			if ((xmlhttp.readyState === 4) && (xmlhttp.status === 200)) {
+				if (udel === false) {
 					document.getElementById(inner).innerHTML = xmlhttp.responseText;
-					if (sessionStorage.getItem('upangkalan-1') != null) {
+					if (sessionStorage.getItem("upangkalan-1") != null) {
 
 						console.log("unoAdd-" + uno);
 
 						for (n = 1; n <= uno; n++) { //coba ganti <=
-							document.getElementById('upangkalan-' + n).value = sessionStorage.getItem('upangkalan-' + n);
-							document.getElementById("ubanyak-" + n).value = sessionStorage.getItem('ubanyak-' + n);
-							document.getElementById("ufaktur-" + n).value = sessionStorage.getItem('ufaktur-' + n);
+							document.getElementById("upangkalan-" + n).value = sessionStorage.getItem("upangkalan-" + n);
+							document.getElementById("ubanyak-" + n).value = sessionStorage.getItem("ubanyak-" + n);
+							document.getElementById("ufaktur-" + n).value = sessionStorage.getItem("ufaktur-" + n);
 						}
 					}
 					udel2 = false;
@@ -393,7 +395,7 @@ function uview_input_post_add() {
 				} else {
 					var temp = "udeleteFormGroup-" + uke;
 					console.log(temp);
-					document.getElementById(temp).innerHTML = '';
+					document.getElementById(temp).innerHTML = "";
 					udel = false;
 					if (uno > 1) {
 						// uno -= 1;
@@ -417,7 +419,7 @@ function udeleteForm(k) {
 	if (uform) {
 		uno = parseInt(document.getElementById("signNo").value) + 1;
 		for (x = 1; x < uno; x++) {
-			sessionStorage.setItem("upangkalan-" + x, document.getElementById('upangkalan-' + x).value);
+			sessionStorage.setItem("upangkalan-" + x, document.getElementById("upangkalan-" + x).value);
 			sessionStorage.setItem("ubanyak-" + x, document.getElementById("ubanyak-" + x).value);
 			sessionStorage.setItem("ufaktur-" + x, document.getElementById("ufaktur-" + x).value);
 		}
@@ -432,7 +434,7 @@ function udeleteForm(k) {
 		uke = k;
 		if (uno != k) {
 			for (n = k; n < uno; n++) {
-				if (n == k) {
+				if (n === k) {
 					sessionStorage.setItem("upangkalan-" + n, null);
 					sessionStorage.setItem("ubanyak-" + n, null);
 					sessionStorage.setItem("ufaktur-" + n, null);
