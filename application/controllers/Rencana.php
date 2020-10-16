@@ -311,7 +311,7 @@ class Rencana extends CI_Controller{
                         placeholder="*Nomor faktur" name="ufaktur-'.$no.'" min="0" required
                         onkeyup="javascript:usetSession('.$no.')" value="'.$v['nomor_faktur'].'">
                 </dib>
-            </div>
+            </div>'.$r.'
         </div>
     ';
     $no++;

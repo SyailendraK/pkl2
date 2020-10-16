@@ -60,7 +60,6 @@ class Pesanan_model extends CI_Model{
     }
 
     public function getListPrint(){
-        $ary = [];
         $result = [];
         $temp = $this->session->userdata('print');
         if($temp != null){
