@@ -23,7 +23,7 @@ $(document).ready(function () {
         $('#nav').slideToggle();
     });
     $('#closeMe').click(function () {
-        if (getCookie('ciNav') != 'yes') {
+        if (getCookie('ciNav') !== 'yes') {
             setCookie('ciNav', 'yes', 365);
         } else {
             setCookie('ciNav', 'no', 365);
@@ -31,7 +31,7 @@ $(document).ready(function () {
         tocFlip();
     });
     var tocFlip = function(){
-        if (getCookie('ciNav') == 'yes') {
+        if (getCookie('ciNav') === 'yes') {
             $('#nav2').show();
             $('#topMenu').remove();
             $('body').css({ background: 'none' });
@@ -47,7 +47,7 @@ $(document).ready(function () {
             $('.wy-nav-side').show();
         }
     };
-    if (getCookie('ciNav') == 'yes')
+    if (getCookie('ciNav') === 'yes')
     {
         tocFlip();
         //$('#nav').slideToggle();
@@ -72,9 +72,9 @@ function getCookie(cname) {
     var ca = document.cookie.split(';');
     for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
-        while (c.charAt(0) == ' ')
+        while (c.charAt(0) === ' ')
             c = c.substring(1);
-        if (c.indexOf(name) == 0) {
+        if (c.indexOf(name) === 0) {
             return c.substring(name.length, c.length);
         }
     }
@@ -85,20 +85,20 @@ function getCookie(cname) {
 // resize window
 $(window).on('resize', function(){
     // show side nav on small screens when pulldown is enabled
-    if (getCookie('ciNav') == 'yes' && $(window).width() <= 768) { // 768px is the tablet size defined by the theme
+    if (getCookie('ciNav') === 'yes' && $(window).width() <= 768) { // 768px is the tablet size defined by the theme
         $('.wy-nav-side').show();
     }
     // changing css with jquery seems to override the default css media query
     // change margin
-    else if (getCookie('ciNav') == 'no' && $(window).width() <= 768) {
+    else if (getCookie('ciNav') === 'no' && $(window).width() <= 768) {
         $('.wy-nav-content-wrap').css({'margin-left': 0});
     }
     // hide side nav on large screens when pulldown is enabled
-    else if (getCookie('ciNav') == 'yes' && $(window).width() > 768) {
+    else if (getCookie('ciNav') === 'yes' && $(window).width() > 768) {
         $('.wy-nav-side').hide();
     }
     // change margin
-    else if (getCookie('ciNav') == 'no' && $(window).width() > 768) {
+    else if (getCookie('ciNav') === 'no' && $(window).width() > 768) {
         $('.wy-nav-content-wrap').css({'margin-left': '300px'});
     }
 });

@@ -5,7 +5,6 @@ defined('BASEPATH') or exit('No direct script access 0lowed');
 class Header_model extends CI_Model{
     
     public function getListPrint(){
-            $ary = [];
             $result = [];
             $temp = $this->session->userdata('print');
             if($temp != null){
