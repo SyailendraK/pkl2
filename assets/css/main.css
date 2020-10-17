@@ -1,85 +1,89 @@
 
-
-
-
-/*//////////////////////////////////////////////////////////////////
-[ FONT ]*/
+/* //////////////////////////////////////////////////////////////////
+[ FONT ] */
 
 @font-face {
   font-family: Montserrat-Regular;
-  src: url('../fonts/montserrat/Montserrat-Regular.ttf'); 
+  src: url('../fonts/montserrat/Montserrat-Regular.ttf');
 }
 
 @font-face {
   font-family: Montserrat-ExtraBold;
-  src: url('../fonts/montserrat/Montserrat-ExtraBold.ttf'); 
+  src: url('../fonts/montserrat/Montserrat-ExtraBold.ttf');
 }
 
 @font-face {
   font-family: Montserrat-Bold;
-  src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
+  src: url('../fonts/montserrat/Montserrat-Bold.ttf');
 }
 
 
-/*//////////////////////////////////////////////////////////////////
-[ RESTYLE TAG ]*/
+/* //////////////////////////////////////////////////////////////////
+[ RESTYLE TAG ] */
 
 * {
-	margin: 0px; 
-	padding: 0px; 
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body, html {
-	height: 100%;
-	font-family: Montserrat-Regular, sans-serif;
+body,
+html {
+  height: 100%;
+  font-family: Montserrat-Regular, sans-serif;
 }
 
-/*---------------------------------------------*/
+/* --------------------------------------------- */
 a {
-	font-family: Montserrat-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666;
+  margin: 0;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
 }
 
 a:focus {
-	outline: none !important;
+  outline: none !important;
 }
 
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
   color: #fff;
 }
 
-/*---------------------------------------------*/
-h1,h2,h3,h4,h5,h6 {
-	margin: 0px;
+/* --------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 p {
-	font-family: Montserrat-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
+  font-family: Montserrat-Regular;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666;
+  margin: 0;
 }
 
-ul, li {
-	margin: 0px;
-	list-style-type: none;
+ul,
+li {
+  margin: 0;
+  list-style-type: none;
 }
 
 
-/*---------------------------------------------*/
+/* --------------------------------------------- */
 input {
-	outline: none;
-	border: none;
+  outline: none;
+  border: none;
 }
 
 textarea {
@@ -87,57 +91,58 @@ textarea {
   border: none;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   border-color: transparent !important;
 }
 
-input:focus::-webkit-input-placeholder { color:transparent; }
-input:focus:-moz-placeholder { color:transparent; }
-input:focus::-moz-placeholder { color:transparent; }
-input:focus:-ms-input-placeholder { color:transparent; }
+input:focus::-webkit-input-placeholder { color: transparent; }
+input:focus:-moz-placeholder { color: transparent; }
+input:focus::-moz-placeholder { color: transparent; }
+input:focus:-ms-input-placeholder { color: transparent; }
 
-textarea:focus::-webkit-input-placeholder { color:transparent; }
-textarea:focus:-moz-placeholder { color:transparent; }
-textarea:focus::-moz-placeholder { color:transparent; }
-textarea:focus:-ms-input-placeholder { color:transparent; }
+textarea:focus::-webkit-input-placeholder { color: transparent; }
+textarea:focus:-moz-placeholder { color: transparent; }
+textarea:focus::-moz-placeholder { color: transparent; }
+textarea:focus:-ms-input-placeholder { color: transparent; }
 
-input::-webkit-input-placeholder { color: #999999; }
-input:-moz-placeholder { color: #999999; }
-input::-moz-placeholder { color: #999999; }
-input:-ms-input-placeholder { color: #999999; }
+input::-webkit-input-placeholder { color: #999; }
+input:-moz-placeholder { color: #999; }
+input::-moz-placeholder { color: #999; }
+input:-ms-input-placeholder { color: #999; }
 
-textarea::-webkit-input-placeholder { color: #999999; }
-textarea:-moz-placeholder { color: #999999; }
-textarea::-moz-placeholder { color: #999999; }
-textarea:-ms-input-placeholder { color: #999999; }
+textarea::-webkit-input-placeholder { color: #999; }
+textarea:-moz-placeholder { color: #999; }
+textarea::-moz-placeholder { color: #999; }
+textarea:-ms-input-placeholder { color: #999; }
 
-/*---------------------------------------------*/
+/* --------------------------------------------- */
 button {
-	outline: none !important;
-	border: none;
-	background: transparent;
+  outline: none !important;
+  border: none;
+  background: transparent;
 }
 
 button:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 iframe {
-	border: none !important;
+  border: none !important;
 }
 
 
-/*//////////////////////////////////////////////////////////////////
-[ Utility ]*/
+/* //////////////////////////////////////////////////////////////////
+[ Utility ] */
 .txt1 {
   font-family: Montserrat-Regular;
   font-size: 16px;
-  color: #cccccc;
+  color: #ccc;
   line-height: 1.4;
 }
 
 .bo1 {
-  border-bottom: 1px solid #999999;
+  border-bottom: 1px solid #999;
 }
 
 .hov1:hover {
@@ -145,8 +150,8 @@ iframe {
 }
 
 
-/*//////////////////////////////////////////////////////////////////
-[ login ]*/
+/* //////////////////////////////////////////////////////////////////
+[ login ] */
 
 .limiter {
   width: 100%;
@@ -154,7 +159,7 @@ iframe {
 }
 
 .container-login100 {
-  width: 100%;  
+  width: 100%;
   min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -168,7 +173,6 @@ iframe {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  
   position: relative;
   z-index: 1;
 }
@@ -197,8 +201,8 @@ iframe {
 
 
 
-/*------------------------------------------------------------------
-[  ]*/
+/* ------------------------------------------------------------------
+[  ] */
 .login100-form {
   width: 100%;
   display: -webkit-box;
@@ -216,12 +220,11 @@ iframe {
   color: #fff;
   line-height: 1.2;
   text-align: center;
-
   width: 100%;
   display: block;
 }
 
-/*---------------------------------------------*/
+/* --------------------------------------------- */
 .login100-form-avatar {
   width: 120px;
   height: 120px;
@@ -229,12 +232,13 @@ iframe {
   overflow: hidden;
   margin: 0 auto;
 }
+
 .login100-form-avatar img {
   width: 100%;
 }
 
 
-/*---------------------------------------------*/
+/* --------------------------------------------- */
 .wrap-input100 {
   position: relative;
   width: 100%;
@@ -245,8 +249,7 @@ iframe {
   font-family: Montserrat-Bold;
   font-size: 15px;
   line-height: 1.2;
-  color: #333333;
-
+  color: #333;
   display: block;
   width: 100%;
   background: #fff;
@@ -256,8 +259,8 @@ iframe {
 }
 
 
-/*------------------------------------------------------------------
-[ Focus ]*/
+/* ------------------------------------------------------------------
+[ Focus ] */
 .focus-input100 {
   display: block;
   position: absolute;
@@ -267,8 +270,8 @@ iframe {
   z-index: -1;
   width: 100%;
   height: 100%;
-  box-shadow: 0px 0px 0px 0px;
-  color: rgba(0,91,234, 0.6);
+  box-shadow: 0 0 0 0;
+  color: rgba(0, 91, 234, 0.6);
 }
 
 .input100:focus + .focus-input100 {
@@ -278,22 +281,21 @@ iframe {
 
 @-webkit-keyframes anim-shadow {
   to {
-    box-shadow: 0px 0px 80px 30px;
+    box-shadow: 0 0 80px 30px;
     opacity: 0;
   }
 }
 
 @keyframes anim-shadow {
   to {
-    box-shadow: 0px 0px 80px 30px;
+    box-shadow: 0 0 80px 30px;
     opacity: 0;
   }
 }
 
 .symbol-input100 {
   font-size: 15px;
-  color: #999999;
-
+  color: #999;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -308,7 +310,6 @@ iframe {
   height: 100%;
   padding-left: 30px;
   pointer-events: none;
-
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
@@ -321,8 +322,8 @@ iframe {
 }
 
 
-/*------------------------------------------------------------------
-[ Button ]*/
+/* ------------------------------------------------------------------
+[ Button ] */
 .container-login100-form-btn {
   width: 100%;
   display: -webkit-box;
@@ -339,11 +340,10 @@ iframe {
   font-size: 15px;
   line-height: 1.5;
   color: #e0e0e0;
-
   width: 100%;
   height: 50px;
   border-radius: 25px;
-  background: #333333;
+  background: #333;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -352,12 +352,10 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 0 25px;
-
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
-
   position: relative;
   z-index: 1;
 }
@@ -389,18 +387,17 @@ iframe {
   color: #fff;
 }
 
-.login100-form-btn:hover:before {
+.login100-form-btn:hover::before {
   opacity: 1;
 }
 
-/*------------------------------------------------------------------
-[ Button sign in with ]*/
+/* ------------------------------------------------------------------
+[ Button sign in with ] */
 .btn-face,
 .btn-google {
   font-family: Raleway-Bold;
   font-size: 16px;
   line-height: 1.2;
-
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -413,13 +410,11 @@ iframe {
   border-radius: 3px;
   border: 1px solid #e6e6e6;
   background-color: #fff;
-
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
-
 
 .btn-face {
   color: #3b5998;
@@ -432,7 +427,7 @@ iframe {
 }
 
 .btn-google {
-  color: #555555;
+  color: #555;
 }
 
 .btn-google img {
@@ -441,7 +436,6 @@ iframe {
   padding-bottom: 1px;
 }
 
-
 .btn-face:hover,
 .btn-google:hover {
   border-color: #d33f8d;
@@ -449,8 +443,8 @@ iframe {
 
 
 
-/*------------------------------------------------------------------
-[ Alert validate ]*/
+/* ------------------------------------------------------------------
+[ Alert validate ] */
 
 .validate-input {
   position: relative;
@@ -472,16 +466,13 @@ iframe {
   transform: translateY(-50%);
   right: 8px;
   pointer-events: none;
-
   font-family: Montserrat-Bold;
   color: #c80000;
   font-size: 13px;
   line-height: 1.4;
   text-align: left;
-
   visibility: hidden;
   opacity: 0;
-
   -webkit-transition: opacity 0.4s;
   -o-transition: opacity 0.4s;
   -moz-transition: opacity 0.4s;
@@ -504,7 +495,7 @@ iframe {
   right: 13px;
 }
 
-.alert-validate:hover:before {
+.alert-validate:hover::before {
   visibility: visible;
   opacity: 1;
 }
@@ -516,8 +507,8 @@ iframe {
   }
 }
 
-/*//////////////////////////////////////////////////////////////////
-[ responsive ]*/
+/* //////////////////////////////////////////////////////////////////
+[ responsive ] */
 
 @media (max-width: 576px) {
   .wrap-login100 {
